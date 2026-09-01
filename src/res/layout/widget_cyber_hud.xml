@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_cyber_card"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingHorizontal="14dp"
+    android:paddingVertical="9dp">
+
+    <!-- 1. Centered Live Time (HH:mm:ss a) -->
+    <TextClock
+        android:id="@+id/tc_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format12Hour="hh:mm:ss a"
+        android:format24Hour="HH:mm:ss"
+        android:textColor="@color/cyber_cyan"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:shadowColor="#FF000000"
+        android:shadowDx="0.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="3.0" />
+
+    <!-- 2. Centered Full Date -->
+    <TextClock
+        android:id="@+id/tc_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:format12Hour="EEEE • d MMMM yyyy"
+        android:format24Hour="EEEE • d MMMM yyyy"
+        android:textColor="@color/pure_white"
+        android:textSize="10.5sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:shadowColor="#FF000000"
+        android:shadowDx="0.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="2.0" />
+
+    <!-- 3. Bottom 3 Telemetry Columns with Exact 3.8dp Cyber Cyan Bars -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Column 1: BATTERY -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingHorizontal="4dp">
+            <TextView
+                android:id="@+id/tv_battery_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BATTERY 100%"
+                android:textColor="@color/cyber_cyan"
+                android:textSize="8.5sp"
+                android:textStyle="bold" />
+            <ProgressBar
+                android:id="@+id/pb_battery"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="3.8dp"
+                android:layout_marginTop="2.2dp"
+                android:max="100"
+                android:progress="100"
+                android:progressDrawable="@drawable/progress_cyber_cyan" />
+        </LinearLayout>
+
+        <!-- Column 2: RAM -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingHorizontal="4dp">
+            <TextView
+                android:id="@+id/tv_ram_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RAM 58%"
+                android:textColor="@color/cyber_cyan"
+                android:textSize="8.5sp"
+                android:textStyle="bold" />
+            <ProgressBar
+                android:id="@+id/pb_ram"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="3.8dp"
+                android:layout_marginTop="2.2dp"
+                android:max="100"
+                android:progress="58"
+                android:progressDrawable="@drawable/progress_cyber_cyan" />
+        </LinearLayout>
+
+        <!-- Column 3: STORAGE -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingHorizontal="4dp">
+            <TextView
+                android:id="@+id/tv_storage_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STORAGE 14%"
+                android:textColor="@color/cyber_cyan"
+                android:textSize="8.5sp"
+                android:textStyle="bold" />
+            <ProgressBar
+                android:id="@+id/pb_storage"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="3.8dp"
+                android:layout_marginTop="2.2dp"
+                android:max="100"
+                android:progress="14"
+                android:progressDrawable="@drawable/progress_cyber_cyan" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

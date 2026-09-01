@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.amintum.clock.cyberhudwidget">
+
+    <uses-sdk
+        android:minSdkVersion="28"
+        android:targetSdkVersion="36" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:label="Cyber Clock Hud widget"
+        android:icon="@drawable/ic_widget_icon"
+        android:theme="@android:style/Theme.DeviceDefault">
+
+        <receiver
+            android:name=".CyberHUDWidgetProvider"
+            android:label="Cyber Clock Hud widget"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIME_TICK" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.BATTERY_CHANGED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.amintum.clock.cyberhudwidget.ACTION_UPDATE_HUD" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/cyber_hud_widget_info" />
+        </receiver>
+
+    </application>
+</manifest>

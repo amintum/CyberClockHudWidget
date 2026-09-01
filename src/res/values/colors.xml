@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cyber_cyan">#FF00E5FF</color>
+    <color name="cyber_cyan_translucent">#8000E5FF</color>
+    <color name="cyber_obsidian">#9908090C</color>
+    <color name="pure_white">#FFFFFFFF</color>
+    <color name="bar_track">#3300E5FF</color>
+</resources>
