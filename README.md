@@ -9,16 +9,8 @@ A cyberpunk-inspired, hardware-synced **Live Clock & System Telemetry Home Scree
 
 ## 🎨 Visual Layout & Architecture
 
-```text
-┌─────────────────────────────────────────────────────────────┐
-│                                                             │
-│                         07:55:53 PM                         │
-│                   Friday • 28 August 2026                   │
-│                                                             │
-│   ⚡ BATTERY 100%          RAM 58%             STORAGE 14%  │
-│   ▓▓▓▓▓▓▓▓▓▓▓             ▓▓▓▓▓▓░             ▓▓░░░░░      │  ← 3.8dp Cyber Cyan Bars
-└─────────────────────────────────────────────────────────────┘
-```
+<img width="1080" height="409" alt="image" src="https://github.com/user-attachments/assets/9f54572a-f79a-4e2f-ac02-4e5b9ddb4edb" />
+
 
 ---
 
